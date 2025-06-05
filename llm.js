@@ -1,9 +1,13 @@
 
+// require('dotenv').config()
 
+import 'dotenv'
 import { GoogleGenAI } from "@google/genai";
 import readlineSync from 'readline-sync';
+import { configDotenv } from 'dotenv';
+configDotenv()
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyBoL09RoWmo06hw2RVEMf70kN8tWdPUl18" });
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 let historyarr = [];
 
